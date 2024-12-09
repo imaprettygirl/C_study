@@ -149,7 +149,7 @@ int main(void)
       *******
      *********
     */
-    int floor;
+    /* int floor;
     printf("¸î ÃþÀ¸·Î ½×°Ú´À³Ä?");
     scanf("%d",&floor);
     for(int i = 0; i < floor; i++)
@@ -163,8 +163,10 @@ int main(void)
             printf("*");
         }
         printf("\n");
-    }
+    } */
 
+   // &&
+   
 
     return 0;
 }
