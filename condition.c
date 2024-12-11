@@ -62,7 +62,7 @@ int main(void)
    } */
 
   // &&(AND) ||(OR)
-  int a = 10;
+  /*int a = 10;
   int b = 11;
   int c = 13;
   int d = 13;
@@ -73,7 +73,7 @@ int main(void)
   else
   {
     printf("값이 서로 다르네요\n");
-  }
+  }*/
 
         return 0;
 }
