@@ -3,72 +3,72 @@
 
 int main(void)
 {
-    srand(time(NULL));
+    srand(time(NULL)); // 랜덤 시드 설정
+    int correctAnswer = 0;   // 이번 게임에 맞힌 문제 개수
+    int userAnswer;          // 사용자 입력
+    int calculatedAnswer;    // 정답 계산
+    int operation;           // 현재 연산 (0: 덧셈, 1: 뺄셈, 2: 곱셈, 3: 나눗셈)
+    int prevOperation = -1;  // 이전 연산 초기화 (-1)
+
     printf("\n\n == 랜덤 연산 퀴즈 게임 == \n\n");
-    int correctAnswers = 0; // 사용자가 맞힌 문제 개수
-    int answer;            // 사용자가 입력한 답
 
-    int prevOperation = -1; // 이전 문제의 연산 종류
-    int operation;          // 현재 문제의 연산 종류 (0: 덧셈, 1: 뺄셈, 2: 곱셈, 3: 나눗셈)
-
-    // 5번의 문제 출제
-    for (int i = 1; i <= 5; i++)
+    // 5번의 문제 출력
+    for (int i = 0; i < 5; i++)
     {
-        int num1 = rand() % 10 + 1; // 1~10 사이의 첫 번째 숫자
-        int num2 = rand() % 10 + 1; // 1~10 사이의 두 번째 숫자
-        int calculatedAnswer;       // 정답
+        int num1 = rand() % 10 + 1; // 첫 번째 숫자 (1~10)
+        int num2 = rand() % 10 + 1; // 두 번째 숫자 (1~10)
 
-        // 연산 종류 결정 (이전과 다른 연산 종류 선택)
-        do {
-            operation = rand() % 4; // 0~3 사이의 연산 선택
+        // 연산 중복 방지: do-while문 사용
+        do
+        {
+            operation = rand() % 4; // 연산 선택 (0~3)
         } while (operation == prevOperation);
         prevOperation = operation; // 현재 연산을 이전 연산으로 저장
 
-        printf("\n%d번째 문제: ", i);
-
-        // 문제 출제 및 정답 계산
+        // 문제 출제
         if (operation == 0) // 덧셈
         {
-            printf("%d + %d = ? ", num1, num2);
+            printf("%d 번째 문제 : %d + %d = ? \n", i + 1, num1, num2);
             calculatedAnswer = num1 + num2;
         }
         else if (operation == 1) // 뺄셈
         {
-            printf("%d - %d = ? ", num1, num2);
+            printf("%d 번째 문제 : %d - %d = ? \n", i + 1, num1, num2);
             calculatedAnswer = num1 - num2;
         }
         else if (operation == 2) // 곱셈
         {
-            printf("%d * %d = ? ", num1, num2);
+            printf("%d 번째 문제 : %d * %d = ? \n", i + 1, num1, num2);
             calculatedAnswer = num1 * num2;
         }
         else // 나눗셈
         {
-            num1 = (num1 / num2) * num2; // num1이 num2로 나누어떨어지게 조정
-            printf("%d / %d = ? ", num1, num2);
+            num1 = num2 * (rand() % 10 + 1); // num2의 배수로 num1 설정
+            printf("%d 번째 문제 : %d / %d = ? \n", i + 1, num1, num2);
             calculatedAnswer = num1 / num2;
         }
 
-        // 사용자 입력 처리
-        scanf("%d", &answer);
+        // 사용자 입력
+        scanf("%d", &userAnswer);
+        getchar(); // 입력 버퍼 비우기
 
-        if (answer == calculatedAnswer)
+        // 정답 확인
+        if (userAnswer == calculatedAnswer)
         {
-            printf(" >> 정답입니다!\n");
-            correctAnswers++;
+            printf("정답입니다! \n\n");
+            correctAnswer++;
         }
         else
         {
-            printf(" >> 땡! 정답은 %d입니다.\n", calculatedAnswer);
+            printf("틀렸습니다! 정답은 %d입니다 \n\n", calculatedAnswer);
         }
 
-        printf("\n 계속하려면 아무 키나 누르세요\n");
+        printf("\n 계속하려면 아무 키나 누르세요...\n");
         getchar(); // 입력 대기
-        getchar();
     }
 
     // 최종 결과 출력
-    printf("\n\n총 5문제 중 %d문제를 맞췄습니다.\n", correctAnswers);
+    printf("\n\n 총 5문제 중 %d 문제를 맞췄습니다! \n", correctAnswer);
 
     return 0;
 }
