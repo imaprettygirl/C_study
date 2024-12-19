@@ -71,7 +71,7 @@ int main(void)
         }
 
         // 레벨업을 할 건지 확인 (레벨업은 20초마다 한번씩 수행)
-        if (totalElapsedTime / 20 > level - 1)
+        if (totalElapsedTime / 20 >= level - 1)
         {
             // 레벨업
             level++; // level : 1 => level : 2 => level : 3
