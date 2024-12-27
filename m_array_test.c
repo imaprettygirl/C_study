@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 int printboard[4][5];       // 게임판 4*5 배열
 int checkCoordinates[4][5]; // 같은 좌표 선택 여부
@@ -17,7 +18,7 @@ void setRandomTargetSum(); // 목표 값 설정
 
 int main(void)
 {
-    srand(time(NULL));  // 난수 초기화화
+    srand(time(NULL));  // 난수 초기화
     
     initData();
     shuffleNumber();        // 숫자 섞기
