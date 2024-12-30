@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void)
+int main_array_test(void)
 {
     srand(time(NULL)); // 랜덤 시드 설정
     int correctAnswer = 0;   // 이번 게임에 맞힌 문제 개수

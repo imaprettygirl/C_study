@@ -10,7 +10,7 @@ float sub(float input1, float input2);
 float mul(float input1, float input2);
 float div(float input1, float input2);
 
-int main(void)
+int main_function_text(void)
 {
     float input1, input2;
     float result = 0;

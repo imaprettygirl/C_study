@@ -14,7 +14,7 @@ int sub(int num, int num2);
 int mul(int num, int num2);
 int div(int num, int num2);
 
-int main(void)
+int main_function(void)
 {
     // function
     // °è»ê±â

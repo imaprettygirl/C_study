@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int main_loop(void)
 {
     // ¡÷ºÆ ctrl + /
     /*printf("Hello World\n");

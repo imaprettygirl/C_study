@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int main_m_array_test(void)
 {
     /* // 다차원 배열 Multidimensional Array
     int i;

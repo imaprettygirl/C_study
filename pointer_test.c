@@ -13,7 +13,7 @@ void feedFish(int *, int); // 물고기에게 먹이를 주는 함수
 void powerupFish(int num); // 선택한 물고기만 레벨업 시키는 함수
 int checkFishAlive();     // 물고기가 죽었는지 확인하는 함수
 
-int main(void)
+int main_pointer_test(void)
 {
     int num;             // 먹이 줄 물고기 번호
     int action;          // 사용자 선택

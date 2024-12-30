@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int main_array(void)
 {
     //배열
     /* int subway_1 = 30; // 지하철 1호칸에는 30명이 타고 있습니다.

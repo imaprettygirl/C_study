@@ -18,7 +18,7 @@ int foundAllAnimals(); //
 int conv_pos_x(int x);
 int conv_pos_y(int y);
 
-int main(void)
+int main_m_array_project(void)
 {
     srand(time(NULL));
 

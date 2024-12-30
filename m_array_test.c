@@ -1,4 +1,4 @@
-#include <stdio.h>
+/* #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
@@ -16,7 +16,7 @@ int isGameFinished();   // 게임종료
 void setRandomTargetSum(); // 목표 값 설정
 
 
-int main(void)
+int main_m_array_test(void)
 {
     srand(time(NULL));  // 난수 초기화
     
@@ -185,3 +185,4 @@ void setRandomTargetSum()
     targetsum = possibleSums[rand() % 19];
     printf("목표 값: %d\n", targetsum);
 }
+ */
